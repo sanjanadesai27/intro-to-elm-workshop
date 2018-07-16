@@ -4,9 +4,11 @@ import Html exposing (..)
 
 
 pluralize singular plural number =
-    -- EXERCISE: can you fill in the pluralize function body?
-    plural
+    if number == 1 then 
+        singular 
+    else 
+        plural
 
 
 main =
-    text (pluralize "apple" "apples" 1)
+    text (pluralize "apple" "apples" 2)
